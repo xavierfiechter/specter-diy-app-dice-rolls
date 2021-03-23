@@ -10,7 +10,7 @@ from binascii import hexlify
 class DiceRollsApp(BaseApp):
     """ """
     rolls = []
-    prefixes = [b"dicerolls"]
+    prefixes = []
     button = "Dice Rolls"
     async def menu(self, show_screen):
         buttons = [
