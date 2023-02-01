@@ -1,5 +1,5 @@
 from binascii import hexlify
-from embit import bip39
+from embit.bip39 import WORDLIST
 
 def rolls(r):
     """
@@ -56,7 +56,7 @@ def rolls(r):
     w[-1] |= sha256(h).digest()[0]
 
     # Print index number and each word (24)
-    #print('\n'.join('%4d: %s' % (n+1, bip39.WORDLIST[i]) for n, i in enumerate(w)))
+    #print('\n'.join('%4d: %s' % (n+1, WORDLIST[i]) for n, i in enumerate(w)))
 
     # added this line to get the seed words as return value
-    return (warning_message, ' '.join('%4d: %s' % (n+1, bip39.WORDLIST[i]) for n, i in enumerate(w)), w, h)
+    return (warning_message, ' '.join('%4d: %s' % (n+1, WORDLIST[i]) for n, i in enumerate(w)), w, h)
