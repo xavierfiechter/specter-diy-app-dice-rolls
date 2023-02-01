@@ -1,5 +1,5 @@
 from binascii import hexlify
-from bitcoin.bip39 import WORDLIST
+from embit.bip39 import WORDLIST
 
 def rolls(r):
     """
